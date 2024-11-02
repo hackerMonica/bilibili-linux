@@ -18,7 +18,8 @@ fail() {
     echo -e "\033[41;37m 失败 \033[0m $1"
 }
 
-download_url="https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe"
+# download_url="https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe"
+download_url="https://dl.hdslb.com/mobile/pack/bili_win/16105308/public/bilibili-setup-v1.14.2.exe"
 mkdir -p "$root_dir/cache"
 if [[ ! -f "$root_dir/cache/bili_win-install.exe" ]];then
     wget -c "$download_url" -O "$root_dir/cache/bili_win-install.exe.tmp"

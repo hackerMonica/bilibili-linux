@@ -281,6 +281,8 @@ jobs:
           sudo apt update 
           sudo apt install libwine
           echo "install wine32..."
+          sudo apt-get clean
+          sudo apt-get update
           sudo apt install wine32
           sudo npm install asar -g
           npm install

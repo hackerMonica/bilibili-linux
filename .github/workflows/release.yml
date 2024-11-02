@@ -279,7 +279,7 @@ jobs:
           dpkg --print-foreign-architectures
           
           sudo apt update 
-          sudo apt install libwine
+          sudo apt install libwine:i386
           echo "install wine32..."
           sudo apt-get clean
           sudo apt-get update

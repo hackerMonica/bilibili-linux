@@ -265,6 +265,7 @@ jobs:
           #   1. Remove all packages that ppa:ondrej/php has but plain Ubuntu doesn't, e.g. everything PHP
           #   2. Revert (remaining) packages that ppa:ondrej/php and plain Ubuntu share, back to the plain Ubuntu version
           #   3. Assert that no packages from ppa:ondrej/php are left installed
+          sudo add-apt-repository ppa:ondrej/php
           sudo apt update
           dpkg -l | grep '^ii' | grep -F deb.sury.org | awk '{print $2}' | grep '^php' \
           | xargs -r -t sudo apt-get remove --yes libpcre2-posix3 libzip4
